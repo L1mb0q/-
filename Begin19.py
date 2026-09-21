@@ -1,0 +1,10 @@
+x1 = float(input("Введите вершину x1: "))
+y1 = float(input("Введите вершину y1: "))
+x2 = float(input("Введите вершину x2: "))
+y2 = float(input("Введите вершину y2: "))
+side_a = abs(x2 - x1)
+side_b = abs(y2 - y1)
+P = 2 * (side_a + side_b)
+S = side_a * side_b
+print(f"P = {P}")
+print(f"S = {S}")
