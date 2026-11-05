@@ -1,0 +1,49 @@
+--7.1
+--select s.last_name, s.first_name, g.group_name
+--FROM students s
+--INNER JOIN groups g ON s.group_id = g.group_id
+--ORDER by g.group_name, s.last_name;
+--7.2
+--select g.group_name, s.last_name
+--from groups g
+--LEFT JOIN students s ON s.group_id - g.group_id
+--order by g.group_name;
+--7.3
+--select s.last_name, sub.subject_name, gr.grade, gr.grade_date
+--from grades gr
+--join students s on gr.student_id = s.student_id
+--join subjects sub on gr.subject_id = sub.subject_id
+--order by s.last_name, gr.grade_date;
+--7.4
+--select s.last_name as Студент,
+--		g.group_name as Группа,
+--		sub.subject_name as Предмет,
+--		t.last_name as Преподаватель,
+--		gr.grade    as Оценка,
+--		gr.grade_date as Дата
+--from grades gr
+--join students s   on gr.student_id = s.student_id
+--join groups g    on s.group_id     = g.group_id
+--join subjects sub on gr.subject_id = sub.subject_id
+--join teachers t   on gr.teacher_id = t.teacher_id
+--order by gr.grade_date; 
+--7.5
+--select sub.subject_name
+--from subjects sub
+--left join grades gr on gr.subject_id = sub.subject_id
+--where gr.grade_id is null;
+--7.6
+--select s.last_name, s.first_name, avg(gr.grade ) as Средний_балл
+--from grades gr join students s on gr.student_id = s.student_id
+--group by s.student_id
+--order by Средний_балл desc;
+--Задание 7А
+--SELECT 
+--    t.last_name AS Преподаватель, 
+--    sub.subject_name AS Предмет, 
+--    COUNT(gr.grade_id) AS Количество_оценок
+--FROM grades gr
+--JOIN teachers t ON gr.teacher_id = t.teacher_id
+--JOIN subjects sub ON gr.subject_id = sub.subject_id
+--GROUP BY t.teacher_id, t.last_name, sub.subject_id, sub.subject_name
+--ORDER BY t.last_name;

@@ -1,0 +1,31 @@
+--6.1
+--select count(*) as Всего_студентов from students;
+--6.2
+--select avg(grade) as Средний_балл,
+--		min(grade) as Минимум,
+--		max(grade) as Максимум
+--from grades;
+--select sum(hours) as Всего_часов from subjects;
+--6.3
+--select student_id, avg(grade) as Средний_балл, count(*) as число_оценок
+--from grades
+--group by student_id;
+--6.4
+--select subject_id, avg(grade) as Средний_балл
+--from grades
+--group by subject_id
+--order by Средний_балл desc;
+--6.5
+--select student_id, count(*) as Число_оценок
+--from grades
+--group by student_id
+--having count(*) > 1;
+--6.6
+--select DISTINCT grade from grades;
+--select DISTINCT group_id from students;
+--Задание 6А
+--SELECT group_id, COUNT(*) AS student_count FROM students
+--GROUP BY group_id;
+--Задание 6Б
+--SELECT AVG(grade) AS average_grade FROM grades
+--WHERE subject_id = 1;

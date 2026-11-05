@@ -1,0 +1,12 @@
+ --8.1
+--update students set group_id = 2 where student_id = 3;
+--8.2
+--update groups set course = course + 1;
+--8.3
+--delete from grades where grade_id = 3;
+--8.4
+--INSERT INTO grades (student_id, subject_id, teacher_id, grade, grade_date)
+--values(3, 1, 1, 4, '2026-09-05');
+--8.5
+--update students set group_id = 1 where student_id = 3;
+--update groups set course = course - 1;

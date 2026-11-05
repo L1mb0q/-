@@ -1,0 +1,33 @@
+--5.1
+--select * from students;
+--5.2
+--select last_name, first_name from students;
+--5.3
+--select last_name as Фамилия, first_name AS Имя, group_id AS Группа
+--FROM students;
+--5.4
+--SELECT * FROM students WHERE group_id = 1;
+--5.5
+--SELECT * FROM subjects WHERE hours > 60;
+--5.6
+--SELECT * FROM students WHERE last_name LIKE 'И%';
+--5.7
+--SELECT * FROM grades WHERE grade = 5 AND subject_id = 1;
+--SELECT * FROM students WHERE group_id = 1 OR group_id = 2;
+--SELECT * FROM grades WHERE NOT grade = 5;
+--5.8
+--SELECT * FROM grades WHERE grade BETWEEN 4 AND 5;
+--SELECT * FROM students WHERE group_id In (1, 3);
+--5.9
+--SELECT last_name, first_name, group_id
+--FROM students
+--ORDER BY group_id, last_name;
+--SELECT * FROM grades ORDER BY grade DESC, grade_date;
+--5.10
+--SELECT * FROM grades ORDER BY grade_date LIMIT 5;
+--Задание 5А
+--SELECT * FROM subjects 
+--WHERE hours > 60 ORDER BY hours DESC;
+-- Задание 5Б
+--SELECT last_name, first_name FROM students 
+--WHERE group_id = 3 ORDER BY last_name, first_name;

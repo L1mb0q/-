@@ -1,0 +1,32 @@
+--№1
+--SELECT g.group_name AS "Название группы", COUNT(s.student_id) AS "Число студентов"
+--FROM students s
+--JOIN groups g ON s.group_id = g.group_id
+--GROUP BY g.group_name
+--ORDER BY COUNT(s.student_id) DESC;
+--№2
+--SELECT s.last_name AS last_name,
+--       s.first_name AS first_name,
+--       g.group_name AS group_name,
+--       ROUND(AVG(gr.grade), 2) AS Средний_балл
+--FROM grades gr
+--JOIN students s ON gr.student_id = s.student_id
+--JOIN groups g ON s.group_id = g.group_id
+--GROUP BY s.student_id, s.last_name, s.first_name, g.group_name
+--ORDER BY AVG(gr.grade) DESC;
+--№3
+--SELECT s.last_name AS last_name,
+--       s.first_name AS first_name
+--FROM grades gr
+--JOIN students s ON gr.student_id = s.student_id
+--GROUP BY s.student_id, s.last_name, s.first_name
+--HAVING ROUND(AVG(gr.grade), 2) = 5; 
+--№4
+--SELECT t.last_name AS last_name,
+--       t.first_name AS first_name,
+--       COUNT(g.grade_id) AS Количество_оценок
+--FROM teachers t
+--JOIN grades g ON t.teacher_id = g.teacher_id
+--GROUP BY t.teacher_id, t.last_name, t.first_name
+--ORDER BY COUNT(g.grade_id) DESC
+--LIMIT 1;
